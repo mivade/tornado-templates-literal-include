@@ -3,9 +3,7 @@
   <head>
     <title>Tornado templates with literal includes</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
-    {% autoescape None %}
-    {{ vue_template('static/html/test-template.html') }}
-    {% autoescape xhtml_escape %}
+    {% module VueTemplate("test-template.html") %}
   </head>
   <body>
     <div id="app">
