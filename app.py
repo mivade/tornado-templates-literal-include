@@ -3,6 +3,7 @@ from tornado import log
 from tornado.ioloop import IOLoop
 from tornado.web import Application, RequestHandler
 import uimodules
+import uimethods
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +19,7 @@ app = Application(
     static_path='static',
     template_path='templates',
     ui_modules=uimodules,
+    ui_methods=uimethods,
     debug=True
 )
 app.listen(8989)
